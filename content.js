@@ -70,6 +70,12 @@ function convertPrices() {
           
           const convertedEl = document.createElement('div');
           convertedEl.className = 'dk-currency-converted';
+          
+          // If this is the original undiscounted (crossed-out) price, add a specific class
+          if (el.getAttribute('data-testid') === 'price-no-discount') {
+              convertedEl.classList.add('dk-currency-no-discount');
+          }
+          
           convertedEl.textContent = "~ " + formattedPrice;
           
           // Fix styling so it doesn't break their layout

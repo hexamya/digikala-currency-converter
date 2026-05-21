@@ -1,6 +1,6 @@
 .dk-currency-converted {
   font-size: 1.6rem;
-  color: #05172f; /* Blue text */
+  color: #3f4064; /* Blue text */
   margin-top: 4px;
   font-weight: bold;
   width: 100%;
@@ -10,8 +10,9 @@
   order: 99;
 }
 
-@media (prefers-color-scheme: dark) {
-  .dk-currency-converted {
-    color: #0d2a58; /* Dark mode compatible blue */
-  }
+/* Specific styling for the crossed-out undiscounted prices */
+.dk-currency-no-discount {
+  font-size: 1rem;
+  color: #c0c2c5; /* Gray text */
+  font-weight: 500;
 }
