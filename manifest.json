@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Digikala Currency Converter",
+  "version": "1.0",
+  "description": "Converts Digikala prices to USD.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.digikala.com/*",
+    "https://apiv2.nobitex.ir/*",
+    "https://open.er-api.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.digikala.com/*"],
+      "css": ["styles.css"],
+      "js": ["utils.js", "content.js"]
+    }
+  ]
+}

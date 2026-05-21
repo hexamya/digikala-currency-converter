@@ -1,0 +1,17 @@
+.dk-currency-converted {
+  font-size: 1.6rem;
+  color: #05172f; /* Blue text */
+  margin-top: 4px;
+  font-weight: bold;
+  width: 100%;
+  text-align: right;
+  direction: ltr;
+  flex-basis: 100%; 
+  order: 99;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dk-currency-converted {
+    color: #0d2a58; /* Dark mode compatible blue */
+  }
+}
